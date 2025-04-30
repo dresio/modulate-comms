@@ -1,3 +1,5 @@
+![alt text](modulate.svg)
+
 # Modulate - P2P Chat Application
 
 Modulate is a peer-to-peer chat application with group chat functionality, built using Rust and WebRTC.
