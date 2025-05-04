@@ -29,5 +29,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: modulate
-          path: target/x86_64-pc-windows-gnu/release/modulate.exe
+          name: modulate-comms
+          path: target/x86_64-pc-windows-gnu/release/modulate-comms.exe

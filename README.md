@@ -1,15 +1,28 @@
-![alt text](modulate.svg)
+![modulate-comms](modulate.svg)
 
-# Modulate - P2P Chat Application
+![License](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)
 
-Modulate is a peer-to-peer chat application with group chat functionality, built using Rust and WebRTC.
+# modulate-comms - P2P Chat Application
+
+modulate-comms is a peer-to-peer chat application with group chat functionality, built using Rust and WebRTC.
 
 ## Features
+
+### Current
 
 - Peer-to-peer communication using WebRTC
 - No central server needed for messaging
 - End-to-end encryption
 - Low latency messaging
+
+### Planned
+
+- Clean api to allow 3rd party usage
+- Room mesh based comms
+- User management (still conceptualizing how this will work)
+- Video, audio, file management
+- Basic front end for usability
+- Centrailized system to act as a signaling server
 
 ## Setup
 
@@ -23,8 +36,8 @@ Modulate is a peer-to-peer chat application with group chat functionality, built
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/dresio/modulate.git
-cd modulate
+git clone https://github.com/dresio/modulate-comms.git
+cd modulate-comms
 ```
 
 2. Build the application:
@@ -36,7 +49,7 @@ cargo build
 3. Run the application:
 
 ```bash
-./target/release/modulate --help
+./target/release/modulate-comms --help
 ```
 
 ## Usage
@@ -46,19 +59,19 @@ cargo build
 #### Offerer (initiates the connection):
 
 ```bash
-./target/release/modulate offer
+./target/release/modulate-comms offer
 ```
 
 #### Answerer (waits for an offer):
 
 ```bash
-./target/release/modulate answer
+./target/release/modulate-comms answer
 ```
 
 ### Group Chat Mode (Experimental)
 
 ```bash
-./target/release/modulate group --max-peers 5
+./target/release/modulate-comms group --max-peers 5
 ```
 
 ## Chat Commands
@@ -78,3 +91,9 @@ Once in a chat session, the following commands are available:
 ## Implementation Details
 
 "WIP"
+
+## License
+
+Following in line with many rust packages, modulate-comms is dual licensed under <a href="LICENSE-APACHE.txt">Apache License, Version
+2.0</a> or <a href="LICENSE-MIT.txt">MIT license</a> which you can choose either.  
+Please note some crates this depends on have other license, which can typically be found in their README files underneath the License header.

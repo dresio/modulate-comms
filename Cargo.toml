@@ -1,5 +1,5 @@
 [package]
-name = "modulate"
+name = "modulate-comms"
 version = "0.1.0"
 edition = "2021"
 authors = ["Daniel Resio <dresiomob@gmail.com>"]
