@@ -4,6 +4,10 @@ version = "0.0.1"
 edition = "2021"
 authors = ["Daniel Resio <dresiomob@gmail.com>"]
 description = "A peer-to-peer chat application with group chat functionality"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/dresio/modulate-comms"
+readme = "README.md"
+keywords = ["chat", "webrtc"]
 
 [dependencies]
 webrtc = "0.12.0"
