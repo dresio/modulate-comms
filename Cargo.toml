@@ -1,6 +1,6 @@
 [package]
-name = "modulate"
-version = "0.1.0"
+name = "modulate-comms"
+version = "0.0.1"
 edition = "2021"
 authors = ["Daniel Resio <dresiomob@gmail.com>"]
 description = "A peer-to-peer chat application with group chat functionality"
