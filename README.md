@@ -1,6 +1,9 @@
 ![modulate-comms](modulate.svg)
 
 ![License](https://img.shields.io/badge/license-MIT%2FApache-blue.svg)
+[![Crates.io](https://img.shields.io/crates/v/modulate-comms.svg)](https://crates.io/crates/modulate-comms)
+[![Downloads](https://img.shields.io/crates/d/modulate-comms.svg)](https://crates.io/crates/modulate-comms)
+[![Docs](https://docs.rs/modulate-comms/badge.svg)](https://docs.rs/modulate-comms/latest/modulate-comms/)
 
 # modulate-comms - P2P Chat Application
 
@@ -18,7 +21,7 @@ modulate-comms is a peer-to-peer chat application with group chat functionality,
 ### Planned
 
 - Unit tests
-- Clean api to allow 3rd party usage
+- Clean api to allow 3rd party usage with creation of library instead of just app
 - Room mesh based comms
 - User management (still conceptualizing how this will work)
 - Video, audio, file management
