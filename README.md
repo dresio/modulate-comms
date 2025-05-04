@@ -17,6 +17,7 @@ modulate-comms is a peer-to-peer chat application with group chat functionality,
 
 ### Planned
 
+- Unit tests
 - Clean api to allow 3rd party usage
 - Room mesh based comms
 - User management (still conceptualizing how this will work)

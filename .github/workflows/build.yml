@@ -1,4 +1,4 @@
-name: Build Executable
+name: Build_and_Release
 
 on:
   push:
@@ -8,6 +8,17 @@ on:
   workflow_dispatch:
 
 jobs:
+  # TODO: Quick run of just tests
+  # test:
+  #   name: Cargo Test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+
+  #     - name: Install Rust toolchain
+  #       uses: dtolnay/rust-toolchain@stable
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -16,18 +27,24 @@ jobs:
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: x86_64-pc-windows-gnu
+          targets: x86_64-pc-windows-gnu, x86_64-unknown-linux-gnu
 
       - name: Install cross-compilation dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y mingw-w64
 
-      - name: Build for Windows
-        run: cargo build --release --target x86_64-pc-windows-gnu
+      - name: Build
+        run: cargo build --release --target x86_64-pc-windows-gnu --target x86_64-unknown-linux-gnu
 
-      - name: Upload Artifact
+      - name: Upload Windows
         uses: actions/upload-artifact@v4
         with:
-          name: modulate-comms
+          name: modulate-comms-win
           path: target/x86_64-pc-windows-gnu/release/modulate-comms.exe
+
+      - name: Upload Linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: modulate-comms-linux
+          path: target/x86_64-unknown-linux-gnu/release/modulate-comms.exe
